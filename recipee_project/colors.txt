@@ -1,0 +1,4 @@
+Almost white: #f3eeea
+Light brown: #e8dbd3
+Medium brown: #aa7d7a
+Dark brown: #75474a
