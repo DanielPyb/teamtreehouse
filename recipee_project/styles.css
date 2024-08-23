@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap");
+
+:root {
+  --almost-white: #f3eeea;
+  --light-brown: #e8dbd3;
+  --medium-brown: #aa7d7a;
+  --dark-brown: #75474a;
+}
+
+* {
+}
+
+body {
+  background-color: var(--light-brown);
+  font-family: "Playpen Sans", cursive;
+  background-image: url(img/background.jpg);
+  background-attachment: fixed;
+}
+
+a {
+  color: var(--medium-brown);
+}
+
+.meat {
+  color: var(--dark-brown);
+  font-weight: 800;
+}
+
+#ingredients {
+}
+
+#intro img {
+  border: var(--dark-brown) 5px solid;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+header,
+footer,
+nav {
+  text-align: center;
+}
+
+header,
+footer,
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+nav {
+  margin: 40px;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+#ingredients {
+  background-color: var(--light-brown);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+p,
+li {
+  line-height: 2;
+}
+
+#back-to-top {
+  display: block;
+  text-align: right;
+}
+
+#back-to-list {
+  background-color: var(--dark-brown);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
