@@ -7,46 +7,11 @@
   --dark-brown: #75474a;
 }
 
-* {
-}
-
 body {
   background-color: var(--light-brown);
   font-family: "Playpen Sans", cursive;
   background-image: url(img/background.jpg);
   background-attachment: fixed;
-}
-
-a {
-  color: var(--medium-brown);
-}
-
-.meat {
-  color: var(--dark-brown);
-  font-weight: 800;
-}
-
-#ingredients {
-}
-
-#intro img {
-  border: var(--dark-brown) 5px solid;
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-header,
-footer,
-nav {
-  text-align: center;
-}
-
-header,
-footer,
-main {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 main {
@@ -62,21 +27,35 @@ nav {
 footer {
   margin-top: 10px;
 }
-
-#ingredients {
-  background-color: var(--light-brown);
-  padding: 5px 15px;
-  border-radius: 5px;
-}
-
 h2 {
   font-size: 36px;
   text-align: center;
 }
-
 p,
 li {
   line-height: 2;
+}
+
+a {
+  color: var(--medium-brown);
+}
+
+header,
+footer,
+nav {
+  text-align: center;
+}
+
+header,
+footer,
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.meat {
+  color: var(--dark-brown);
+  font-weight: 800;
 }
 
 #back-to-top {
@@ -91,4 +70,17 @@ li {
   border-radius: 5px;
   color: white;
   font-weight: 600;
+}
+
+#ingredients {
+  background-color: var(--light-brown);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+#intro img {
+  border: var(--dark-brown) 5px solid;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
