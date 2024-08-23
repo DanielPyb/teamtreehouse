@@ -18,6 +18,7 @@ main {
   background-color: white;
   padding: 25px;
   border-radius: 10px;
+  min-height: 80vh;
 }
 
 nav {
@@ -27,6 +28,7 @@ nav {
 footer {
   margin-top: 10px;
 }
+
 h2 {
   font-size: 36px;
   text-align: center;
