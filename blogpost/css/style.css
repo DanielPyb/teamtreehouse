@@ -1,24 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 :root {
   --dark-blue: #294969;
   --medium-orange: #ffa949;
   --dark-orange: #cf7919;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
 header {
+  width: 100vw;
   background-color: var(--dark-blue);
   color: ghostwhite;
-  padding: 10px 15px;
+  padding: 0px 15px;
   border: 12px solid var(--medium-orange);
   border-bottom-color: var(--dark-orange);
-  margin: -8px -8px 20px;
+  margin: -8px;
+}
+
+article {
+  margin-top: 3rem;
 }
 
 footer {
-  width: 200px;
+  width: 300px;
   padding: 4px;
   border: 2px solid var(--medium-orange);
   margin: 0 auto;
   color: var(--dark-blue);
   font-size: 0.8rem;
   text-align: center;
+}
+
+#bio {
+  padding: 2rem;
+  background-color: lightblue;
+  border: 8px solid var(--dark-blue);
+  font-family: "Courier Prime", monospace;
+}
+
+aside img,
+figure,
+#bio {
+  width: 100%;
+  max-width: 600px;
+}
+
+section {
+  border-bottom: 8px dotted var(--dark-blue);
+  width: 100vw;
+  margin: -8px;
+}
+section p,
+section h1 {
+  padding: 1rem;
+}
+
+section,
+aside {
+  min-height: 100vh;
+}
+
+aside {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: ghostwhite;
+  text-align: center;
+  padding: 10px;
+}
+
+section h2 {
+  position: sticky;
+  width: 100vw;
+  background-color: var(--dark-blue);
+  color: ghostwhite;
+  padding: 10px 15px;
+  border: 12px solid var(--medium-orange);
+  border-bottom-color: var(--dark-orange);
+  top: 0;
 }
