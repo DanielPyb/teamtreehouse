@@ -4,15 +4,7 @@ const input = form.querySelector("input");
 const mainDiv = document.querySelector(".main");
 const ul = document.getElementById("invitedList");
 
-const filterDiv = document.createElement("div");
-const filterCheck = document.createElement("input");
-const filterLabel = document.createElement("label");
-
-filterLabel.innerText = "Only see confirmed attendees";
-filterCheck.type = "checkbox";
-filterDiv.append(filterLabel);
-filterDiv.append(filterCheck);
-mainDiv.insertBefore(filterDiv, ul);
+const filterCheck = document.querySelector(".main div input");
 
 filterCheck.addEventListener("change", (e) => {
   const isChecked = e.target.checked;
@@ -35,23 +27,27 @@ filterCheck.addEventListener("change", (e) => {
 });
 
 function createLI(text) {
+  function createElement(htmlEl, property, value) {
+    const newEl = document.createElement(htmlEl);
+    newEl[property] = value;
+    return newEl;
+  }
+  function appendTo(parentEl, htmlEl, property, value) {
+    const element = createElement(htmlEl, property, value);
+    parentEl.appendChild(element);
+  }
   const li = document.createElement("li");
-  const span = document.createElement("span");
-  span.innerText = text;
-  li.appendChild(span);
-  const label = document.createElement("label");
-  label.innerText = "Confirmed";
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
+
+  appendTo(li, "span", "innerText", text);
+
+  const label = createElement("label", "innerText", "Confirmed");
+  const checkbox = createElement("input", "type", "checkbox");
   label.appendChild(checkbox);
   li.appendChild(label);
-  const editBTN = document.createElement("button");
-  editBTN.innerText = "Edit";
-  li.appendChild(editBTN);
 
-  const removeBTN = document.createElement("button");
-  removeBTN.innerText = "Remove";
-  li.appendChild(removeBTN);
+  appendTo(li, "button", "innerText", "Edit");
+  appendTo(li, "button", "innerText", "Remove");
+
   return li;
 }
 
@@ -73,7 +69,6 @@ ul.addEventListener("change", (e) => {
   } else {
     listItem.className = "";
   }
-  console.log(e.target.checked);
 });
 
 ul.addEventListener("click", (e) => {
@@ -81,23 +76,34 @@ ul.addEventListener("click", (e) => {
     const button = e.target;
     const li = button.parentNode;
     const ul = li.parentNode;
+    const nameActions = {
+      remove: () => {
+        ul.removeChild(li);
+      },
+      edit: () => {
+        const span = li.firstElementChild;
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = span.innerText;
+        li.insertBefore(input, span);
+        li.removeChild(span);
+        button.innerText = "Save";
+      },
+      save: () => {
+        const input = li.firstElementChild;
+        const span = document.createElement("span");
+        span.innerText = input.value;
+        li.insertBefore(span, input);
+        li.removeChild(input);
+        button.innerText = "Edit";
+      },
+    };
     if (button.innerText.toLowerCase() === "remove") {
-      ul.removeChild(li);
+      nameActions.remove();
     } else if (button.innerText.toLowerCase() === "edit") {
-      const span = li.firstElementChild;
-      const input = document.createElement("input");
-      input.type = "text";
-      input.value = span.innerText;
-      li.insertBefore(input, span);
-      li.removeChild(span);
-      button.innerText = "Save";
+      nameActions.edit();
     } else if (button.innerText.toLowerCase() === "save") {
-      const input = li.firstElementChild;
-      const span = document.createElement("span");
-      span.innerText = input.value;
-      li.insertBefore(span, input);
-      li.removeChild(input);
-      button.innerText = "Edit";
+      nameActions.save();
     }
   }
 });
