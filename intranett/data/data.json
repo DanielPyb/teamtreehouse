@@ -1,0 +1,50 @@
+[
+    {
+    "name": "Daniel",
+    "inOffice": true
+    },
+    {
+    "name": "John",
+    "inOffice": false
+    },
+    {
+    "name": "Frida",
+    "inOffice": false
+    },
+    {
+    "name": "Geir",
+    "inOffice": true
+    },
+    {
+    "name": "Mary",
+    "inOffice": true
+    },    
+    {
+    "name": "Bjørnar",
+    "inOffice": false
+    },
+    {
+    "name": "Fredrik",
+    "inOffice": true
+    },
+    {
+    "name": "Camilla",
+    "inOffice": true
+    },
+    {
+    "name": "Svein-Arild",
+    "inOffice": false
+    },
+    {
+    "name": "Andreas",
+    "inOffice": true
+    },
+    {
+    "name": "Truc",
+    "inOffice": true
+    },    
+    {
+    "name": "Jarle",
+    "inOffice": false
+    }
+]
